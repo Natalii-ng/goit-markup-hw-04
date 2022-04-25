@@ -250,18 +250,19 @@ header .logo {
   text-align: center;
 }
 .qualities-block {
-  display: block;
+  display: flex;
   height: 120px;
   margin-bottom: 30px;
   background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f5f4fa;
+  align-items: center;
+  justify-content: center;
 }
 .qualities-icon {
   width: 70px;
   height: 70px;
-  margin: 25px 100px;
 }
 /*work*/
 .work {
@@ -318,15 +319,14 @@ header .logo {
 }
 .social {
   display: flex;
-  margin-left: 32px;
-  margin-right: 32px;
+  align-items: center;
+  justify-content: center;
 }
 .social-icon {
   display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  align-items: center;
   justify-content: center;
 }
 
@@ -419,6 +419,7 @@ header .logo {
 /* footer */
 footer {
   background-color: #2f303a;
+  padding: 60px 0;
 }
 .adress p {
   margin-bottom: 9px;
@@ -508,15 +509,16 @@ footer .logo {
 .project-card:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
+footer .container {
+  display: flex;
+  align-items: baseline;
+}
 .adress-info {
   display: inline-block;
 
   margin-right: 70px;
 }
 
-.social-media {
-  display: inline-block;
-}
 .social-media h3 {
   margin-bottom: 20px;
 
@@ -556,8 +558,4 @@ footer .logo {
   width: 20px;
   height: 20px;
   fill: var(--primary-white-color);
-}
-footer .container {
-  padding: 60px 0;
-  align-items: center;
 }
