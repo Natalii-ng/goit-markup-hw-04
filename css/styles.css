@@ -45,7 +45,7 @@ img {
   list-style: none;
 }
 
-.page-header {
+nav {
   display: flex;
   align-items: center;
 }
@@ -61,9 +61,13 @@ img {
 .accent {
   color: var(--accent-color);
 }
+.page-header {
+  display: flex;
+}
 /* header */
 .site-nav {
   display: flex;
+  align-items: center;
 }
 header .logo {
   display: inline-block;
@@ -72,12 +76,13 @@ header .logo {
 .auth-nav {
   margin-left: auto;
 }
+
 .site-link,
 .contact-link {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: inline-block;
+  display: flex;
   padding: 32px 0;
 }
 .site-link {
@@ -89,8 +94,6 @@ header .logo {
 }
 .site-link:hover,
 .site-link:focus,
-.contact-link:hover,
-.contact-link:focus,
 .current {
   color: var(--accent-color);
 }
@@ -104,31 +107,34 @@ header .logo {
 .contact:last-child {
   margin-right: 0px;
 }
-.envelope,
-.smartphone {
-  padding: 0;
+
+.envelope-icon {
   display: flex;
   align-items: center;
-  margin-right: 10px;
-}
-.envelope-icon {
   width: 16px;
   height: 12px;
   fill: var(--primary-text-color);
+  margin-right: 10px;
 }
 .smartphone-icon {
+  display: flex;
+  align-items: center;
   width: 10px;
   height: 16px;
+  align-items: center;
   fill: var(--primary-text-color);
+  margin-right: 10px;
 }
+.contact-link:focus,
+.contact-link:hover,
 .envelope-icon:hover,
-.envelope-icon:focus {
-  fill: var(--accent-color);
-}
+.envelope-icon:focus,
 .smartphone-icon:hover,
 .smartphone-icon:focus {
   fill: var(--accent-color);
+  color: var(--accent-color);
 }
+
 .link {
   text-decoration: none;
 }
@@ -328,12 +334,9 @@ header .logo {
   height: 44px;
   border-radius: 50%;
   justify-content: center;
+  align-items: center;
 }
 
-.social-icon:hover,
-.social-icon:focus {
-  background-color: var(--accent-color);
-}
 .instagram-icon,
 .twitter,
 .facebook,
@@ -343,24 +346,20 @@ header .logo {
   fill: #afb1b8;
 }
 
+.social-icon:hover,
+.social-icon:focus,
 .instagram-icon:hover,
-.instagram-icon:focus {
-  fill: var(--primary-white-color);
-}
+.instagram-icon:focus,
 .twitter:hover,
-.twitter:focus {
-  fill: var(--primary-white-color);
-}
-
+.twitter:focus,
 .facebook:hover,
-.facebook:focus {
-  fill: var(--primary-white-color);
-}
-
+.facebook:focus,
 .linkedin:hover,
 .linkedin:focus {
   fill: var(--primary-white-color);
+  background-color: var(--accent-color);
 }
+
 .social-list {
   margin-right: 10px;
 }
@@ -382,10 +381,6 @@ header .logo {
 }
 .clients-list:last-child {
   margin-right: 0;
-}
-.clients-list:hover,
-.clients-list:focus {
-  border-color: var(--accent-color);
 }
 
 .clients-icon {
@@ -413,8 +408,11 @@ header .logo {
 .logo-five:hover,
 .logo-five:focus,
 .logo-six:hover,
-.logo-six:focus {
+.logo-six:focus,
+.clients-list:hover,
+.clients-list:focus {
   fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 /* footer */
 footer {
